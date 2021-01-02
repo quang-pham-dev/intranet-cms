@@ -29,6 +29,9 @@
     "intranet-cms-e2e": {
       "tags": [],
       "implicitDependencies": ["intranet-cms"]
+    },
+    "api-intranet-cms": {
+      "tags": []
     }
   }
 }

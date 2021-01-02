@@ -56,7 +56,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "intranet-cms:build"
+            "browserTarget": "intranet-cms:build",
+            "proxyConfig": "apps/intranet-cms/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -114,6 +115,61 @@
           "options": {
             "tsConfig": ["apps/intranet-cms-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/intranet-cms-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "api-intranet-cms": {
+      "root": "apps/api-intranet-cms",
+      "sourceRoot": "apps/api-intranet-cms/src",
+      "projectType": "application",
+      "prefix": "api-intranet-cms",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/api-intranet-cms",
+            "main": "apps/api-intranet-cms/src/main.js",
+            "tsConfig": "apps/api-intranet-cms/tsconfig.app.json",
+            "assets": ["apps/api-intranet-cms/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/api-intranet-cms/src/environments/environment.js",
+                  "with": "apps/api-intranet-cms/src/environments/environment.prod.js"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "api-intranet-cms:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/api-intranet-cms/tsconfig.app.json",
+              "apps/api-intranet-cms/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/api-intranet-cms/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/api-intranet-cms"],
+          "options": {
+            "jestConfig": "apps/api-intranet-cms/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

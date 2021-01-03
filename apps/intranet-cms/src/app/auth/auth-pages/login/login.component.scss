@@ -1,10 +1,8 @@
 input[type=text] {
-  width: 100%;
   padding: 20px;
   box-sizing: border-box;
 }
 input[type=password] {
-  width: 100%;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -19,11 +17,10 @@ input[type=checkbox]
   padding: 10px;
 }
 .btn-Submit {
-  width: 100%;
   font-size: large;
   @apply bg-red-700 text-white font-sans py-2 px-4;
   &:hover {
-    @apply bg-white text-red-700 border border-red-700;
+    @apply bg-white text-red-700 border-0 border-red-700;
   }
 }
 

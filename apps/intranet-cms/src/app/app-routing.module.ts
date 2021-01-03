@@ -23,15 +23,27 @@ const routes: Routes = [
   // }
   {
     path: '',
-    redirectTo: 'auth',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
     path: '',
     children: [
       {
+        path: 'home',
+        loadChildren: './home/home.module#HomeModule'
+      },
+      {
         path: 'auth',
         loadChildren: './auth/auth.module#AuthModule'
+      },
+      {
+        path: 'videos',
+        loadChildren: './videos/videos.module#VideosModule'
+      },
+      {
+        path: 'article',
+        loadChildren: './article/article.module#ArticleModule'
       },
       {
         path: '**',

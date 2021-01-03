@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { VideosComponent } from './videos/videos.component';
+import { VideosRoutingModule } from './videos-routing.module';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [VideosComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    VideosRoutingModule
   ]
 })
 export class VideosModule { }

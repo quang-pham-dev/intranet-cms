@@ -1,0 +1,29 @@
+input[type=text] {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+input[type=password] {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;
+}
+.btn-Submit {
+  width: 100%;
+  font-size: large;
+  @apply bg-red-700 text-white font-sans py-2 px-4;
+  &:hover {
+    @apply bg-white text-red-700 border border-red-700;
+  }
+}
+

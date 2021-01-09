@@ -5,99 +5,101 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login Page</title>
     </head>
-    <body class="bg-black">
-        <nav class="text-white font-bold" aria-label="Breadcrumb">
-            <ol class="list-none p-0 inline-flex">
-                <li class="flex items-center">
-                    <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23"><path d="M20 7.093v-5.093h-3v2.093l3 3zm4 5.907l-12-12-12 12h3v10h18v-10h3zm-5 8h-14v-10.26l7-6.912 7 6.99v10.182zm-5-1h-4v-6h4v6z"/></svg>
-                </li>
-                <li class="flex items-center">
-                    <a>Home</a>
-                    <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
-                </li>
-                <li class="flex items-center text-gray-400">
-                    <a>Login</a>
-                </li>
-            </ol>
-        </nav>
-        <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-md w-full space-y-8">
-                <div class="mb-16 ">
-                    <!-- <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow"> -->
-                    <h2 class="text-center text-3xl font-extrabold text-white">
-                        Great to have you back!
-                    </h2>
-                    <div class="mt-2 m-auto w-1/3">
-                        <div class="overflow-hidden h-1 text-xs flex bg-gray-600">
-                            <div style="width: 15%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-600"></div>
-                            <div style="width: 15%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-600"></div>
-                            <div style="width: 40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-700"></div>
+    <body>
+        <div class="bg-black sm:px-6 lg:px-40 md:bg-clip-content pt-4 pb-40">
+            <nav class="text-white font-bold" aria-label="Breadcrumb">
+                <ol class="list-none p-0 inline-flex">
+                    <li class="flex items-center" routerLink="/">
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23"><path d="M20 7.093v-5.093h-3v2.093l3 3zm4 5.907l-12-12-12 12h3v10h18v-10h3zm-5 8h-14v-10.26l7-6.912 7 6.99v10.182zm-5-1h-4v-6h4v6z"/></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a routerLink="/">Home</a>
+                        <svg class="fill-current w-3 h-3 mx-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></svg>
+                    </li>
+                    <li class="flex items-center text-gray-400">
+                        <a>Login</a>
+                    </li>
+                </ol>
+            </nav>
+            <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-md w-full space-y-8">
+                    <div class="mb-16 ">
+                        <!-- <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow"> -->
+                        <h2 class="text-center text-3xl font-extrabold text-white">
+                            Great to have you back!
+                        </h2>
+                        <div class="mt-2 m-auto w-1/3">
+                            <div class="overflow-hidden h-1 text-xs flex bg-gray-600">
+                                <div style="width: 15%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-600"></div>
+                                <div style="width: 15%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-600"></div>
+                                <div style="width: 40%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-red-700"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <form class="mt-16 space-y-6" action="#" method="POST">
-                    <input type="hidden" name="remember" value="true">
-                    <div class="">
+                    <form class="mt-16 space-y-6" action="#" method="POST">
+                        <input type="hidden" name="remember" value="true">
                         <div class="">
-                            <label for="email-address" class="sr-only">Email or User Name</label>
-                            <input id="email-address" name="email" type="text" autocomplete="email" required 
-                            class="
-                                appearance-none rounded-none relative block w-full 
-                                px-3 py-2 placeholder-gray-400
-                                text-white focus:outline-none focus:ring-indigo-500 
-                                focus:border-indigo-500 focus:z-10 sm:text-sm bg-gray-600
-                            " 
-                            placeholder="Email or User Name">
+                            <div class="">
+                                <label for="email-address" class="sr-only">Email or User Name</label>
+                                <input id="email-address" name="email" type="text" autocomplete="email" required 
+                                class="
+                                    appearance-none rounded-none relative block w-full 
+                                    px-3 py-2 placeholder-gray-400
+                                    text-white focus:outline-none focus:ring-indigo-500 
+                                    focus:border-indigo-500 focus:z-10 sm:text-sm bg-gray-600
+                                " 
+                                placeholder="Email or User Name">
+                            </div>
+                            <div class="mt-5">
+                                <label for="password" class="sr-only">Password</label>
+                                <input id="password" name="password" type="password" autocomplete="current-password" required 
+                                class="
+                                    appearance-none rounded-none relative block w-full 
+                                    px-3 py-2 border-gray-300 placeholder-gray-400 
+                                    text-white focus:outline-none focus:ring-indigo-500
+                                    focus:border-indigo-500 focus:z-10 sm:text-sm bg-gray-600
+                                " 
+                                placeholder="Password">
+                            </div>
                         </div>
-                        <div class="mt-5">
-                            <label for="password" class="sr-only">Password</label>
-                            <input id="password" name="password" type="password" autocomplete="current-password" required 
-                            class="
-                                appearance-none rounded-none relative block w-full 
-                                px-3 py-2 border-gray-300 placeholder-gray-400 
-                                text-white focus:outline-none focus:ring-indigo-500
-                                focus:border-indigo-500 focus:z-10 sm:text-sm bg-gray-600
-                            " 
-                            placeholder="Password">
+                
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <input id="remember_me" name="remember_me" type="checkbox" 
+                                class="
+                                    h-4 w-4 text-indigo-600 focus:ring-indigo-500
+                                    border-gray-300 rounded">
+                                <label for="remember_me" class="ml-2 block text-sm text-white">
+                                Remember me
+                                </label>
+                            </div>
+                            <!-- <div class="text-sm">
+                                <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+                                Forgot your password?
+                                </a>
+                            </div> -->
                         </div>
-                    </div>
-            
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center">
-                            <input id="remember_me" name="remember_me" type="checkbox" 
-                            class="
-                                h-4 w-4 text-indigo-600 focus:ring-indigo-500
-                                border-gray-300 rounded">
-                            <label for="remember_me" class="ml-2 block text-sm text-white">
-                            Remember me
-                            </label>
+                
+                        <div>
+                            <button type="submit" 
+                                class="
+                                    group relative w-full flex justify-center py-3 px-4 
+                                    border border-transparent text-sm font-medium 
+                                    text-white bg-red-700 hover:bg-indigo-700 
+                                    focus:outline-none focus:ring-2 focus:ring-offset-2 
+                                    focus:ring-indigo-500 h-12 
+                                    ">
+                                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                                    <!-- Heroicon name: lock-closed -->
+                                    <svg class="h-5 w-5 text-white group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    </span>
+                                    Login
+                            </button>
                         </div>
-                        <!-- <div class="text-sm">
-                            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                            Forgot your password?
-                            </a>
-                        </div> -->
-                    </div>
-            
-                    <div>
-                        <button type="submit" 
-                            class="
-                                group relative w-full flex justify-center py-3 px-4 
-                                border border-transparent text-sm font-medium 
-                                text-white bg-red-700 hover:bg-indigo-700 
-                                focus:outline-none focus:ring-2 focus:ring-offset-2 
-                                focus:ring-indigo-500 h-12 
-                                ">
-                                <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-                                <!-- Heroicon name: lock-closed -->
-                                <svg class="h-5 w-5 text-white group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-                                </svg>
-                                </span>
-                                Login
-                        </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </body>

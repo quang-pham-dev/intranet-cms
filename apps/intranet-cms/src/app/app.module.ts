@@ -15,11 +15,12 @@ import {
 import { HomeModule } from './home/home.module';
 import { VideosModule } from './videos/videos.module';
 import { ArticleModule } from './article/article.module';
+import { AdminModule } from './admin/admin.module';
 
 // Components in app
 const APP_COMPONENTS = [
   FooterComponent,
-  HeaderComponent
+  HeaderComponent,
 ];
 // Services in app
 const APP_SERVICES = [
@@ -55,7 +56,8 @@ const APP_DIRECTIVES = [
     CoreModule,
     SharedModule,
     AuthModule,
-    NotFoundModule
+    NotFoundModule,
+    AdminModule
   ],
   providers: [
     {

@@ -16,11 +16,11 @@ input[type=checkbox]
   transform: scale(1.5);
   padding: 10px;
 }
-.btn-Submit {
-  font-size: large;
-  @apply bg-red-700 text-white font-sans py-2 px-4;
-  &:hover {
-    @apply bg-white text-red-700 border-0 border-red-700;
-  }
-}
+// .btn-Submit {
+//   font-size: large;
+//   @apply bg-red-700 text-white font-sans py-2 px-4;
+//   &:hover {
+//     @apply bg-white text-red-700 border-0 border-red-700;
+//   }
+// }
 

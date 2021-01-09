@@ -46,6 +46,10 @@ const routes: Routes = [
         loadChildren: './article/article.module#ArticleModule'
       },
       {
+        path: 'admin',
+        loadChildren: './admin/admin.module#AdminModule'
+      },
+      {
         path: '**',
         loadChildren: './not-found/not-found.module#NotFoundModule'
       },

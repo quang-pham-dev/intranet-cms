@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { VideosComponent } from './videos/videos.component';
+import { VideosComponent } from './videos-pages/videos.component';
 
 const routes: Routes = [
   {

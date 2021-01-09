@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ArticleComponent } from './article/article.component';
+import { ArticleComponent } from './article-pages/article.component';
 
 const routes: Routes = [
   {

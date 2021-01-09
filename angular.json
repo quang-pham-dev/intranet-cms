@@ -17,7 +17,6 @@
             "tsConfig": "apps/intranet-cms/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "apps/intranet-cms/src/favicon.ico",
               "apps/intranet-cms/src/assets"
             ],
             "styles": [
